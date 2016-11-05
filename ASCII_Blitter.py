@@ -45,7 +45,7 @@ def blit(fname):
                 c = chr(random.randint(65, 90))
             else:
                 c = str(random.randint(0, 9))
-            console.draw_char(x, y, c, pix[x, y], (0, 0, 0))
+            console.draw_char(x, y, c, pix[x, y], (pix[x, y][0]//10, pix[x, y][1]//10, pix[x, y][2]//10))
 
     tdl.flush()
     tdl.event.key_wait()
